@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Share+Tech+Mono&family=VT323&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-pink: #d57275;
+  --brand-blue: #8dd0f1;
+}
+
+.timeline-container {
+  height: 95vh;
+  width: 100%;
+}
+
+.shimmer-effect {
+  color: #eab308;
+  display: inline-block;
+  /* adding gradients */
+  -webkit-mask: linear-gradient(120deg, #000 25%, #0005, #000 75%) right/250%
+    100%;
+  /* shimmer effect animation */
+  animation: shimmer 2.5s infinite;
+  background-repeat: no-repeat;
+  width: 100vw;
+}
+@keyframes shimmer {
+  100% {
+    /* setting up mask position at left side */
+    -webkit-mask-position: left;
+  }
+}

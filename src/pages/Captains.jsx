@@ -2,6 +2,7 @@ import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 import LeftAlignCard from "../components/LeftAlignCard";
 import RightAlignCard from "../components/RightAlignCard";
+import MobileCard from "../components/MobileCard";
 
 function Captains() {
   const captainsInfo = [
@@ -33,6 +34,8 @@ function Captains() {
       pic: "/ash-pic.JPG",
     },
   ];
+  const width = window.innerWidth;
+  const isMobile = width < 640;
   return (
     <>
       <NavBar />
@@ -40,28 +43,38 @@ function Captains() {
         <h1 className="font-gamer-font text-amber-500 pb-5">
           Meet Our Captains
         </h1>
-
-        <div>
-          <LeftAlignCard captain={captainsInfo[0]} />
-        </div>
-        <div className="w-full flex justify-end py-5">
-          <RightAlignCard captain={captainsInfo[1]} />
-        </div>
-        <div>
-          <LeftAlignCard captain={captainsInfo[2]} />
-        </div>
-        <div className="w-full flex justify-end py-5">
-          <RightAlignCard captain={captainsInfo[3]} />
-        </div>
-        <div>
-          <LeftAlignCard captain={captainsInfo[4]} />
-        </div>
-        <div className="w-full flex justify-end py-5">
-          <RightAlignCard captain={captainsInfo[5]} />
-        </div>
-        <div>
-          <LeftAlignCard captain={captainsInfo[6]} />
-        </div>
+        {isMobile && (
+          <div className="px-2">
+            {captainsInfo.map((captain) => (
+              <MobileCard captain={captain} key={captain.name} />
+            ))}
+          </div>
+        )}
+        {!isMobile && (
+          <>
+            <div>
+              <LeftAlignCard captain={captainsInfo[0]} />
+            </div>
+            <div className="w-full flex justify-end py-5">
+              <RightAlignCard captain={captainsInfo[1]} />
+            </div>
+            <div>
+              <LeftAlignCard captain={captainsInfo[2]} />
+            </div>
+            <div className="w-full flex justify-end py-5">
+              <RightAlignCard captain={captainsInfo[3]} />
+            </div>
+            <div>
+              <LeftAlignCard captain={captainsInfo[4]} />
+            </div>
+            <div className="w-full flex justify-end py-5">
+              <RightAlignCard captain={captainsInfo[5]} />
+            </div>
+            <div>
+              <LeftAlignCard captain={captainsInfo[6]} />
+            </div>
+          </>
+        )}
       </section>
       <Footer />
     </>

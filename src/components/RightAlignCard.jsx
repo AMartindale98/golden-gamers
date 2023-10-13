@@ -12,7 +12,7 @@ function RightAlignCard({ captain }) {
       </Card.Body>
       <Card.Img
         src={captain.pic}
-        className="h-full object-cover border-slate-300 border-2"
+        className="sm:h-full object-cover border-slate-300 border-2"
         alt={`${captain.name}'s photo`}
       ></Card.Img>
     </Card>

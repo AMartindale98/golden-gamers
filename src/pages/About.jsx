@@ -17,16 +17,18 @@ function About() {
         <div className="px-5 pt-5">
           <h1 className="font-gamer-font text-amber-500">About Us</h1>
           <p className="text-[var(--brand-pink)]">
-            We are a service organization that fundraises for{" "}
+            We are a service organization that fundraises for the Children's
+            Miracle Network Hospitals through an annual event called{" "}
             <a
               href="https://www.extra-life.org/index.cfm?fuseaction=donorDrive.team&teamID=63882"
               className="text-[var(--brand-blue)]  hover:text-[var(--brand-pink)] "
             >
               Extra Life
             </a>
-            , a 24-hour gaming marathon benefitting the Children's Miracle
-            Network Hospitals. We have been operating since 2016, and our
-            network has grown to 50+ members.
+            . During this marathon event, players game for 24 hours. Our team
+            prefers to play for 25 hours - an extra hour for an extra life! We
+            have been operating since 2016, and our network has grown to 50+
+            members.
           </p>
           <p className="text-[var(--brand-pink)]">
             Extra Life has recognized our innovative, collegiate model. In 2020,

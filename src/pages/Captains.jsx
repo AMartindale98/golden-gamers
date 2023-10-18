@@ -13,7 +13,7 @@ function Captains() {
     },
     {
       name: "Celine",
-      bio: "Celine Butler (she/her) is a proud history nerd and casual fantasy RPG gamer. Her favorite game is Dragon Age: Origins, though she’s a sucker for any game with a detailed character creator. When she participated in her first Extra Life event in 2018, she knew that she’d stumbled upon something special. She firmly believes that, when it comes to supporting sick and injured kids in the community, gaming is one of the most powerful, accessible ways to make a difference.",
+      bio: "Celine is a proud history nerd and fantasy RPG gamer. Her favorite game is Dragon Age: Origins, though she's a sucker for any game with a detailed character creator. When she participated in her first Extra Life event in 2018, she knew that she'd stumbled upon something special. She realized that, when it comes to supporting sick and injured kids in the community, gaming is one of the most powerful and accessible ways to make a difference. Celine is proud to be one of the Golden Gamers' cofounders, and looks forward to the event every year; nowhere else has she seen such a powerful combination of community and caffeine!",
       pic: "/celine-pic.jpg",
     },
     { name: "Max", bio: "Coming soon!", pic: "/coming-soon.jpg" },

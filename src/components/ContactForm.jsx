@@ -1,14 +1,18 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 import { Button, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import toast, { Toaster } from "react-hot-toast";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import ReCAPTCHA from "react-google-recaptcha";
 
 function ContactForm() {
   const { register, reset, handleSubmit, formState } = useForm();
   const { errors } = formState;
   const form = useRef();
+  const recaptcha = useRef();
+  const REACT_APP_SITE_KEY = "6LdERrAoAAAAAMacHqpu4UYxfiprNhozgVYF_YIT";
 
   const sendEmail = () => {
     emailjs
@@ -29,10 +33,15 @@ function ContactForm() {
   };
 
   function onSubmit() {
-    sendEmail();
+    const captchaValue = recaptcha.current.getValue();
+    if (!captchaValue) {
+      toast.error("Please verify reCAPTCHA.");
+    } else {
+      sendEmail();
 
-    reset();
-    toast.success("Your request has been submitted!");
+      reset();
+      toast.success("Your request has been submitted!");
+    }
   }
 
   function onError() {
@@ -83,7 +92,14 @@ function ContactForm() {
         />
         {errors?.message && <span>This field is required</span>}
       </Form.Group>
-      <Form.Group className="m-auto text-center pt-5">
+      <Form.Group className="!m-auto text-center py-4">
+        <ReCAPTCHA
+          sitekey={REACT_APP_SITE_KEY}
+          ref={recaptcha}
+          size="compact"
+        />
+      </Form.Group>
+      <Form.Group className="!m-auto text-center pt-5">
         <Button type="submit" variant="warning">
           Submit
         </Button>

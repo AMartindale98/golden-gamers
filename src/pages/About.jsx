@@ -37,8 +37,8 @@ function About() {
             panel at Extra Life United.
           </p>
           <p className="text-[var(--brand-pink)] font-semibold">
-            Over our 8 years of fundraising, we have raised over $77,000 for the
-            Children's Miracle Network Hospitals.
+            Over our 8 years of fundraising, we have raised more than $77,000
+            for the Children's Miracle Network Hospitals.
           </p>
         </div>
         <Border />

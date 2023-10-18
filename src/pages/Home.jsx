@@ -11,7 +11,7 @@ function Home() {
       <NavBar />
       <div className="bg-amber-50 text-center px-3 font-gamer-font text-[var(--brand-pink)] overflow-clip ">
         <section>
-          <h1 className="pt-5 text-amber-500  shimmer-effect text-7xl">
+          <h1 className="mt-5 text-amber-500  shimmer-effect text-7xl">
             Welcome!
           </h1>
           <h5 className="sm:w-[35vw] m-auto pt-5 pb-5">

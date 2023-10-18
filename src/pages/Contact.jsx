@@ -3,8 +3,6 @@ import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 
-//to do: check contact form.
-
 function Contact() {
   return (
     <>

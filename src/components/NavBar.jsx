@@ -1,4 +1,4 @@
-import { Nav, Dropdown, NavItem, Navbar } from "react-bootstrap";
+import { Nav, Dropdown, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { HiHome, HiStar } from "react-icons/hi2";
 import { RiTeamFill } from "react-icons/ri";
@@ -42,19 +42,20 @@ function NavBar() {
                 </span>
                 Sponsorship
               </Link>
-              {width > 640 && (
-                <div className="no-underline !text-[var(--brand-pink)] sm:px-3 px-1 inline-flex items-center hover:scale-110 transition-transform">
-                  <span className="px-1 w-fit">
-                    <RiTeamFill />
-                  </span>{" "}
-                  <Dropdown as={NavItem}>
+              <div className="no-underline !text-[var(--brand-pink)] sm:px-3 px-1 inline-flex items-center hover:scale-110 transition-transform">
+                <span className="px-1 w-fit">
+                  <RiTeamFill />
+                </span>{" "}
+                {width > 640 && (
+                  <Dropdown as={"div"} drop="down">
                     <Dropdown.Toggle
-                      as={"div"}
+                      renderOnMount={true}
+                      as={Link}
                       className="cursor-pointer no-underline !text-[var(--brand-pink)]"
                     >
                       About
                     </Dropdown.Toggle>
-                    <Dropdown.Menu>
+                    <Dropdown.Menu align="start">
                       <Dropdown.Item
                         as={Link}
                         to="/about/team"
@@ -65,40 +66,15 @@ function NavBar() {
                       <Dropdown.Item
                         as={Link}
                         to="/about/captains"
-                        replace={true}
                         className="no-underline !text-[var(--brand-pink)] inline-flex items-center !cursor-pointer"
                       >
                         Our Captains
                       </Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown>
-                  {/*
-                                  <NavDropdown
-                    as={"span"}
-                    title={
-                      <span className="text-[var(--brand-pink)]">About</span>
-                    }
-                    className="!text-[var(--brand-pink)]"
-                  >
-                    <NavDropdown.Item
-                      as={Link}
-                      to="/about/team"
-                      replace
-                      className="no-underline !text-[var(--brand-pink)]"
-                    >
-                      Our Team
-                    </NavDropdown.Item>
-                    <NavDropdown.Item
-                      as={Link}
-                      to="/about/captains"
-                      className="no-underline !text-[var(--brand-pink)]"
-                    >
-                      Our Captains
-                    </NavDropdown.Item>
-                  </NavDropdown>
-                  */}
-                </div>
-              )}
+                )}
+              </div>
+
               {width < 640 && (
                 <div className="flex justify-center text-left text-[var(--brand-pink)]">
                   <span className="px-1 w-fit">

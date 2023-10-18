@@ -41,7 +41,7 @@ function ContactForm() {
 
       reset();
       toast.success("Your request has been submitted!");
-      captchaValue.reset();
+      recaptcha.current.reset();
     }
   }
 

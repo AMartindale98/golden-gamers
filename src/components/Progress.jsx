@@ -11,7 +11,7 @@ function Progress() {
       <h1 className="text-amber-500 text-5xl">Our 2024 Progress</h1>
       <h5 className="sm:w-[35vw] m-auto pb-5">
         We are incredibly excited to begin fundraising for 2024! You can support
-        life-saving treatment and research for pediatric cancer by{" "}
+        life-saving treatment by{" "}
         <a
           href="https://www.extra-life.org/index.cfm?fuseaction=donorDrive.team&teamID=66763"
           className="text-[var(--brand-blue)] hover:text-[var(--brand-pink)] transition-colors"

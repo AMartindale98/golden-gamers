@@ -8,16 +8,15 @@ function Progress() {
   );
   return (
     <section className="pb-5">
-      <h1 className="text-amber-500 text-5xl">Our 2023 Progress</h1>
+      <h1 className="text-amber-500 text-5xl">Our 2024 Progress</h1>
       <h5 className="sm:w-[35vw] m-auto pb-5">
-        Thank you to everyone who has donated! Your tax-deductible donations go
-        to life-saving treatment and research. You can still donate until the
-        end of 2023 by{" "}
+        We are incredibly excited to begin fundraising for 2024! You can support
+        life-saving treatment and research for pediatric cancer by{" "}
         <a
-          href="https://www.extra-life.org/index.cfm?fuseaction=donorDrive.team&teamID=63882"
+          href="https://www.extra-life.org/index.cfm?fuseaction=donorDrive.team&teamID=66763"
           className="text-[var(--brand-blue)] hover:text-[var(--brand-pink)] transition-colors"
         >
-          visiting our Extra Life page!
+          donating to our Extra Life page!
         </a>
       </h5>
       <ProgressBar
@@ -29,7 +28,7 @@ function Progress() {
       />
       <div className="sm:flex sm:justify-around mt-2">
         <h4>Raised: ${teamData.sumDonations}</h4>
-        <h4>Goal: ${teamData.fundraisingGoal}</h4>
+        <h4>Goal: ${Math.floor(teamData.fundraisingGoal)}</h4>
       </div>
     </section>
   );

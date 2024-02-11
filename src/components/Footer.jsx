@@ -45,7 +45,7 @@ function Footer() {
         </a>
       </div>
       <p className="bg-body-secondary text-stone-400 p-2 mb-0">
-        Website created by Ash Martindale &copy; 2023
+        Website created by Ash Martindale &copy; 2024
       </p>
     </div>
   );

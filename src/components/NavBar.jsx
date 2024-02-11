@@ -43,46 +43,50 @@ function NavBar() {
                 Sponsorship
               </Link>
               <div className="no-underline !text-[var(--brand-pink)] sm:px-3 px-1 inline-flex items-center hover:scale-110 transition-transform">
-                <span className="px-1 w-fit">
-                  <RiTeamFill />
-                </span>{" "}
                 {width > 640 && (
-                  <Dropdown as={"div"} drop="down">
-                    <Dropdown.Toggle
-                      renderOnMount={true}
-                      as={Link}
-                      className="cursor-pointer no-underline !text-[var(--brand-pink)]"
-                    >
-                      About
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu align="start">
-                      <Dropdown.Item
+                  <>
+                    <span className="px-1 w-fit">
+                      <RiTeamFill />
+                    </span>
+                    <Dropdown as={"div"} drop="down">
+                      <Dropdown.Toggle
+                        renderOnMount={true}
                         as={Link}
-                        to="/about/team"
-                        className="no-underline !text-[var(--brand-pink)] !cursor-pointer"
+                        className="cursor-pointer no-underline !text-[var(--brand-pink)]"
                       >
-                        Our Team
-                      </Dropdown.Item>
-                      <Dropdown.Item
-                        as={Link}
-                        to="/about/captains"
-                        className="no-underline !text-[var(--brand-pink)] inline-flex items-center !cursor-pointer"
-                      >
-                        Our Captains
-                      </Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
+                        About
+                      </Dropdown.Toggle>
+                      <Dropdown.Menu align="start">
+                        <Dropdown.Item
+                          as={Link}
+                          to="/about/team"
+                          className="no-underline !text-[var(--brand-pink)] !cursor-pointer"
+                        >
+                          Our Team
+                        </Dropdown.Item>
+                        <Dropdown.Item
+                          as={Link}
+                          to="/about/captains"
+                          className="no-underline !text-[var(--brand-pink)] inline-flex items-center !cursor-pointer"
+                        >
+                          Our Captains
+                        </Dropdown.Item>
+                      </Dropdown.Menu>
+                    </Dropdown>
+                  </>
                 )}
               </div>
 
               {width < 640 && (
                 <div className="flex justify-center text-left text-[var(--brand-pink)]">
-                  <span className="px-1 w-fit">
-                    <RiTeamFill />
-                  </span>{" "}
                   <div>
-                    <p className="mb-0">About</p>
-                    <p className="mb-0 flex items-center gap-1">
+                    <div className="flex items-center">
+                      <span className="px-1 w-fit">
+                        <RiTeamFill />
+                      </span>{" "}
+                      <p className="mb-0">About</p>
+                    </div>
+                    <p className="mb-0 ms-3 flex items-center gap-1">
                       <BsArrowReturnRight />
                       <Link
                         to="/about/team"
@@ -91,7 +95,7 @@ function NavBar() {
                         Our Team
                       </Link>
                     </p>
-                    <p className="mb-0 flex items-center gap-1">
+                    <p className="mb-0 ms-3 flex items-center gap-1">
                       <BsArrowReturnRight />
                       <Link
                         to="/about/captains"

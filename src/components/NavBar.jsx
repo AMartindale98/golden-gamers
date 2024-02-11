@@ -86,7 +86,7 @@ function NavBar() {
                       </span>{" "}
                       <p className="mb-0">About</p>
                     </div>
-                    <p className="mb-0 ms-3 flex items-center gap-1">
+                    <p className="mb-0 ms-2 flex items-center gap-1">
                       <BsArrowReturnRight />
                       <Link
                         to="/about/team"
@@ -95,7 +95,7 @@ function NavBar() {
                         Our Team
                       </Link>
                     </p>
-                    <p className="mb-0 ms-3 flex items-center gap-1">
+                    <p className="mb-0 ms-2 flex items-center gap-1">
                       <BsArrowReturnRight />
                       <Link
                         to="/about/captains"
